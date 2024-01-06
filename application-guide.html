@@ -6,6 +6,45 @@
     <link href="stylesheet-admissions.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap" rel="stylesheet">
+    <style>
+        #content-header {
+            text-align: center;
+        }
+
+        .list-decimal {
+            counter-reset: listItem;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .list-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .list-item::before {
+            content: counter(listItem) ". ";
+            counter-increment: listItem;
+            margin-right: 10px;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .list-item:hover {
+            background-color: #ffff99;
+            transition: background-color 0.3s ease;
+            transform: scale(1.05);
+        }
+
+        #puzzle-image {
+            width: 40%; 
+            max-width: 150px; 
+            margin: 10px auto; 
+            display: block;
+        }
+    </style>
+</head>
 </head>
 <body>
 <div  class="fixed w-full h-full blur-3xl bg-transparent bg-no-repeat bg-cover -z-10"  style="background-image: url('images/background_image (3).png')">
@@ -102,16 +141,16 @@
 
             <ul class="space-y-2 list-inside list-image-none text-xl">
                 <li class="hover:text-blue-600 cursor-pointer indent-4">
-                    <a href="how-to-apply.html" class="hover:text-blue-600 cursor-pointer">How To Apply</a>
+                    How to apply 
                 </li>
                 <li class="hover:text-blue-600 cursor-pointer indent-4">
                     <a href="application-guide.html" class="hover:text-blue-600 cursor-pointer">Application Guide</a>
                 </li>
                 <li class="hover:text-blue-600 cursor-pointer indent-4">
-                    <a href="deadlines.html" class="hover:text-blue-600 cursor-pointer">Deadlines</a>
+                    <a href="eligibility.html" class="hover:text-blue-600 cursor-pointer">Deadlines</a>
                 </li>
                 <li class="hover:text-blue-600 cursor-pointer indent-4">
-                    <a href="tips.html" class="hover:text-blue-600 cursor-pointer">Tips</a>
+                    <a href="eligibility.html" class="hover:text-blue-600 cursor-pointer">Tips</a>
                 </li>
             </ul>
 
@@ -124,55 +163,66 @@
         <h2 id="content-header" class="justify-center text-4xl font-bold">Admissions</h2>
         <br>
         <div class="flex flex-col text-xl leading-normal gap-y-8">
-        
+
             <h2 id="content-header" class="justify-center text-4xl font-bold">Application Guide</h2>
+            
+            <img id="puzzle-image" src="rompecabezas.png" alt="Puzzle Image">
 
             <p class="indent-8">
                 Welcome to the first step towards a brighter future! The Bright Futures application process is designed to be thorough yet accessible, ensuring that every deserving student has the opportunity to pursue their dreams through higher education. Here's a step-by-step guide to help you navigate through our application process
             </p>
             <ol class="list-decimal list-inside">
-                <div class="flex flex-col leading-normal pl-10 gap-y-4">
-                  <li>
-                   1. Prepare Documentation: Gather all necessary documentation, including academic transcripts, test scores, and any relevant certificates. Be ready to provide details about your extracurricular activities, community contributions, and achievements.
-                  </li>
-                  <li>
-                   2. Online Application Form: Complete our straightforward online application form. This is your opportunity to share your academic journey, personal aspirations, and the impact you hope to make through higher education. Take your time and provide thoughtful responses.
-                  </li>
-                  <li>
-                    3. Essay Submissions: Submit detailed essays as part of your application. These essays are a crucial component, allowing you to showcase your unique story, motivations, and how you envision contributing to the academic community.
-                  </li>
-                  <li>
-                    4. Online English and Math Assessments: Prepare for online assessments in English and Math. These assessments help us gauge your proficiency and readiness for the academic challenges that lie ahead.
-                  </li>
-                  5. Application Review: Our experienced team conducts a comprehensive review of your application, considering factors such as academic performance, extracurricular achievements, and socio-emotional skills.
-                  <li>
-                   6. Admission Interviews: Shortlisted candidates will be invited to participate in 1-3 online admission interviews. These interviews provide an opportunity for us to get to know you better and understand your goals and aspirations.
-                  </li>
-
-                  <li>
-                   7. Selection and Support: Successful candidates will receive notification of acceptance into the Bright Futures program. From this point forward, you embark on a guided journey with our support, from language training to crafting application elements, finding the right university, securing scholarships, and beyond.
+                <li class="list-item">
+                    <p><strong>Prepare Documentation:</strong> Gather all necessary documentation, including academic transcripts, test scores, and any relevant certificates. Be ready to provide details about your extracurricular activities, community contributions, and achievements.</p>
                 </li>
-
-                <li>
-                8. Start Your Journey: Once admitted, you become part of the Bright Futures community. We are committed to providing ongoing support and guidance as you navigate the challenges and triumphs of higher education.
+                <li class="list-item">
+                    <p><strong>Online Application Form:</strong> Complete our straightforward online application form. This is your opportunity to share your academic journey, personal aspirations, and the impact you hope to make through higher education. Take your time and provide thoughtful responses.</p>
                 </li>
+                <li class="list-item">
+                    <p><strong>Essay Submissions:</strong> Submit detailed essays as part of your application. These essays are a crucial component, allowing you to showcase your unique story, motivations, and how you envision contributing to the academic community.</p>
+                </li>
+                <li class="list-item">
+                    <p><strong>Online English and Math Assessments:</strong> Prepare for online assessments in English and Math. These assessments help us gauge your proficiency and readiness for the academic challenges that lie ahead.</p>
+                </li>
+                <li class="list-item">
+                    <p><strong>Application Review:</strong> Our experienced team conducts a comprehensive review of your application, considering factors such as academic performance, extracurricular achievements, and socio-emotional skills.</p>
+                </li>
+                <li class="list-item">
+                    <p><strong>Admission Interviews:</strong> Shortlisted candidates will be invited to participate in 1-3 online admission interviews. These interviews provide an opportunity for us to get to know you better and understand your goals and aspirations.</p>
+                </li>
+                <li class="list-item">
+                    <p><strong>Selection and Support:</strong> Successful candidates will receive notification of acceptance into the Bright Futures program. From this point forward, you embark on a guided journey with our support, from language training to crafting application elements, finding the right university, securing scholarships, and beyond.</p>
+                </li>
+                <li class="list-item">
+                    <p><strong>Start Your Journey:</strong> Once admitted, you become part of the Bright Futures community. We are committed to providing ongoing support and guidance as you navigate the challenges and triumphs of higher education.</p>
+                </li>
+            </ol>
 
-                </div>
-              </ol>
-              
-           
-            <br>
-            <br>
-        </div>
-    </div>
-    <div class="basis-1/8 flex-grow">
-
+        </br>
+        </br>
     </div>
 </div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="aboutUs.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const listItems = document.querySelectorAll('.list-item');
+
+        listItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.transition = 'transform 0.3s ease';
+                item.style.transform = 'scale(1.05)';
+            });
+
+            item.addEventListener('mouseleave', () => {
+                item.style.transition = 'transform 0.3s ease';
+                item.style.transform = 'scale(1)';
+            });
+        });
+    });
+</script>
 
 </body>
 </html>
